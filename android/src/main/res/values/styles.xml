@@ -76,6 +76,7 @@
         <item name="android:listPopupWindowStyle">@style/Widget.IOSched.PopupMenu</item>
         <item name="android:dropDownListViewStyle">@style/Widget.IOSched.ListView.DropDown</item>
         <item name="android:textAppearanceLargePopupMenu">@style/TextAppearance.LargePopupMenu</item>
+        <item name="android:textColorHint">@color/text_color_hint</item>
     </style>
 
     <style name="ActionButton.Overflow" parent="FrameworkRoot.Widget.ActionButton.Overflow">
