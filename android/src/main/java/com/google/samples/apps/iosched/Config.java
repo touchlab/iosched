@@ -109,8 +109,8 @@ public static final long[][] CONFERENCE_DAYS = new long[][] {
     public static final String LIVESTREAM_CAPTIONS_DARK_THEME_URL_PARAM = "&theme=dark";
 
     // Conference public WiFi AP parameters
-    public static final String WIFI_SSID = "DROIDCONNYC";
-    public static final String WIFI_PASSPHRASE = "madeinny";
+    public static final String WIFI_SSID = "droidconnyc";
+    public static final String WIFI_PASSPHRASE = "touchlab";
 
     // GCM config
     public static final String GCM_SERVER_PROD_URL = "https://droidconnyc.appspot.com";

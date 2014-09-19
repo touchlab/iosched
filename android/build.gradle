@@ -67,11 +67,11 @@ android {
             storeFile file("../android/release.jks")
             keyAlias "android"
 
-//            storePassword prodPassword
-//            keyPassword prodPassword
+            storePassword prodPassword
+            keyPassword prodPassword
 
-            storePassword ""
-            keyPassword ""
+//            storePassword ""
+//            keyPassword ""
         }
     }
 
