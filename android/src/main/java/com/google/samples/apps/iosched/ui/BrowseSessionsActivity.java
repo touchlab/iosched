@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.graphics.Paint;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -561,12 +562,16 @@ public class BrowseSessionsActivity extends BaseActivity implements SessionsFrag
          * [/ANALYTICS]
          */
         AnalyticsManager.sendEvent(SCREEN_LABEL, "selectsession", sessionId);
-        getLPreviewUtils().startActivityWithTransition(
+        Uri uri = ScheduleContract.Sessions.buildSessionUri(sessionId);
+        Intent intent = new Intent(this, SessionDetailActivity.class);
+        intent.setData(uri);
+        startActivity(intent);
+        /*getLPreviewUtils().startActivityWithTransition(
                 new Intent(Intent.ACTION_VIEW,
-                        ScheduleContract.Sessions.buildSessionUri(sessionId)),
+                        uri),
                 clickedView,
                 SessionDetailFragment.VIEW_NAME_PHOTO
-        );
+        );*/
     }
 
     @Override

@@ -193,7 +193,10 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
                          * [/ANALYTICS]
                          */
                         AnalyticsManager.sendEvent("My Schedule", "selectslot", uri.toString());
-                        mContext.startActivity(new Intent(Intent.ACTION_VIEW, uri));
+                        Intent intent = new Intent(mContext, SessionDetailActivity.class);
+                        intent.setData(uri);
+                        mContext.startActivity(intent);
+//                        mContext.startActivity(new Intent(Intent.ACTION_VIEW, uri));
                     }
                 }
             });
