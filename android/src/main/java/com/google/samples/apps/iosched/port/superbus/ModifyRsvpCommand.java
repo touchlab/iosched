@@ -3,6 +3,7 @@ package com.google.samples.apps.iosched.port.superbus;
 import android.content.Context;
 import android.util.Log;
 
+import com.crashlytics.android.Crashlytics;
 import com.google.samples.apps.iosched.gcm.ServerUtilities;
 import com.google.samples.apps.iosched.port.tasks.BasicIdResult;
 import com.google.samples.apps.iosched.port.tasks.DataHelper;
@@ -60,6 +61,8 @@ public abstract class ModifyRsvpCommand extends CheckedCommand
         if(exception instanceof DataHelper.AppPermanentException)
         {
             errorCode = ((DataHelper.AppPermanentException)exception).getResponseBody();
+            Crashlytics.log(errorCode);
+            Crashlytics.logException(exception);
             EventBusExt.getDefault().post(this);
         }
         return true;
