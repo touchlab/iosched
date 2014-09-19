@@ -227,8 +227,8 @@ public class SessionDetailFragment extends Fragment implements
 
     public void onEventMainThread(AddRsvpCommand addRsvpCommand)
     {
-        if(addRsvpCommand.getErrorCode() != null)
-            Toast.makeText(getActivity(), addRsvpCommand.getErrorCode(), Toast.LENGTH_LONG).show();
+//        if(addRsvpCommand.getErrorCode() != null)
+//            Toast.makeText(getActivity(), addRsvpCommand.getErrorCode(), Toast.LENGTH_LONG).show();
     }
 
     @Override
