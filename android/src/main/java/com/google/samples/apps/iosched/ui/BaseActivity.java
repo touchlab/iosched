@@ -463,7 +463,7 @@ public abstract class BaseActivity extends Activity implements
 //        if (!Config.hasConferenceEnded()) {
 //            mNavDrawerItems.add(NAVDRAWER_ITEM_VIDEO_LIBRARY);
 //        }
-        mNavDrawerItems.add(NAVDRAWER_ITEM_SEPARATOR_SPECIAL);
+//        mNavDrawerItems.add(NAVDRAWER_ITEM_SEPARATOR_SPECIAL);
         mNavDrawerItems.add(NAVDRAWER_ITEM_SETTINGS);
 
         if(BuildConfig.DEBUG && AppPrefs.getInstance(this).isTicketLoaded())
