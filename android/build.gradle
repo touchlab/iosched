@@ -67,8 +67,8 @@ android {
             storeFile file("../android/release.jks")
             keyAlias "android"
 
-            storePassword prodPassword
-            keyPassword prodPassword
+            storePassword ""//prodPassword
+            keyPassword ""//prodPassword
 
 //            storePassword ""
 //            keyPassword ""
@@ -138,4 +138,6 @@ dependencies {
 
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile 'com.crashlytics.android:crashlytics:1.+'
+    compile 'com.google.zxing:core:3.1.0'
+    compile 'com.google.zxing:android-core:3.1.0'
 }

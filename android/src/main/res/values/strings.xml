@@ -452,7 +452,7 @@
     <!-- Menu item to open the People I've Met screen [CHAR_LIMIT=20] -->
     <string name="navdrawer_item_people_ive_met">People I\'ve Met</string>
 
-    <string name="navdrawer_item_golden_ticket">Check Golden Ticket</string>
+    <string name="navdrawer_item_share_contact">Share Contact Info</string>
 
     <!-- Accessibility description of item to open the People I've Met screen -->
     <string name="navdrawer_item_people_ive_met_a11y">People I\'ve Met</string>

@@ -12,15 +12,23 @@
     tools:context="com.google.samples.apps.iosched.ui.GoldenTicketActivity">
 
     <TextView
-        android:id="@+id/ticketType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="34sp"
-        android:textStyle="bold"/>
+        android:text="Share Contact Info"
+        android:textSize="26sp"
+        android:textColor="#999999"
+        android:paddingBottom="20dp"
+        />
+    <TextView
+        android:id="@+id/plusName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="26sp"/>
 
     <TextView
-        android:id="@+id/ticketMessage"
+        android:id="@+id/accountEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -28,23 +36,8 @@
 
     <ImageView
         android:id="@+id/ticketImage"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:scaleType="centerCrop"/>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        />
 
-        <Button
-            android:id="@+id/ticketShareMessage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:textSize="18sp"/>
-
-    </LinearLayout>
 </LinearLayout>

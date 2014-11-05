@@ -156,7 +156,7 @@ public abstract class BaseActivity extends Activity implements
     protected static final int NAVDRAWER_ITEM_SETTINGS = 7;
     protected static final int NAVDRAWER_ITEM_EXPERTS_DIRECTORY = 8;
     protected static final int NAVDRAWER_ITEM_PEOPLE_IVE_MET = 9;
-    protected static final int NAVDRAWER_ITEM_GOLDEN_TICKET = 10;
+    protected static final int NAVDRAWER_ITEM_SHARE_CONTACT = 10;
     protected static final int NAVDRAWER_ITEM_INVALID = -1;
     protected static final int NAVDRAWER_ITEM_SEPARATOR = -2;
     protected static final int NAVDRAWER_ITEM_SEPARATOR_SPECIAL = -3;
@@ -173,7 +173,7 @@ public abstract class BaseActivity extends Activity implements
             R.string.navdrawer_item_settings,
             R.string.navdrawer_item_experts_directory,
             R.string.navdrawer_item_people_ive_met,
-            R.string.navdrawer_item_golden_ticket
+            R.string.navdrawer_item_share_contact
     };
 
     // icons for navdrawer items (indices must correspond to above array)
@@ -466,10 +466,11 @@ public abstract class BaseActivity extends Activity implements
 //        mNavDrawerItems.add(NAVDRAWER_ITEM_SEPARATOR_SPECIAL);
         mNavDrawerItems.add(NAVDRAWER_ITEM_SETTINGS);
 
-        if(BuildConfig.DEBUG && AppPrefs.getInstance(this).isTicketLoaded())
+        String name = AccountUtils.getActiveAccount(this).name;
+        if(name != null && name.length() > 0)
         {
             mNavDrawerItems.add(NAVDRAWER_ITEM_SEPARATOR_SPECIAL);
-            mNavDrawerItems.add(NAVDRAWER_ITEM_GOLDEN_TICKET);
+            mNavDrawerItems.add(NAVDRAWER_ITEM_SHARE_CONTACT);
         }
 
         createNavDrawerItems();
@@ -850,7 +851,7 @@ public abstract class BaseActivity extends Activity implements
                 startActivity(intent);
                 finish();
                 break;
-            case NAVDRAWER_ITEM_GOLDEN_TICKET:
+            case NAVDRAWER_ITEM_SHARE_CONTACT:
                 GoldenTicketActivity.callMe(this);
                 break;
         }
